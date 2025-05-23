@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgba(21, 68, 255, 0.76), rgb(15, 3, 96));
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Remove qualquer possibilidade de rolagem */
+}
+
+.box {
+    color: rgb(0, 0, 0);
+    background-color: rgb(103, 188, 248);
+    padding: 25px;
+    border-radius: 15px;
+    width: 85%; /* Largura ajustável */
+    max-width: 650px; /* Largura máxima */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    /* Centralização perfeita com flexbox */
+    margin: auto;
+    
+    /* Garante que o conteúdo não ultrapasse o container */
+    overflow: auto;
+    max-height: 90vh; /* Altura máxima em relação à tela */
+}
+
+/* O restante do seu CSS pode permanecer igual */
+fieldset {
+    border: 3px solid rgb(2, 3, 82);
+}
+
+legend {
+    border: 1px solid rgb(10, 3, 64);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(0, 157, 255);
+    border-radius: 8px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(0, 42, 255);
+    outline: none;
+    color: rgb(17, 0, 255);
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+
+#data_nascimento {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit {
+    background-image: linear-gradient(to right, rgb(62, 146, 255), rgb(0, 26, 193));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
+    background-image: linear-gradient(to right, rgb(30, 26, 255), rgb(13, 0, 255));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
